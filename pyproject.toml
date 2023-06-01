@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "auth-frontend"
+version = "0.1.0"
+description = ""
+authors = ["yogendratamang48 <yogen48@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "auth_frontend"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.95.2"
+uvicorn = "^0.22.0"
+jinja2 = "^3.1.2"
+fastapi-cognito-security = "^0.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
