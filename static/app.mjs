@@ -11,7 +11,7 @@ const init = async (tokens) => {
 	const access_token = tokens.access_token;
 
 	try {
-		const apiRes = await fetch("/api", {
+		const apiRes = await fetch("/user", {
 			headers: new Headers({"Authorization": `Bearer ${access_token}`}),
 		});
 		if (!apiRes.ok) {
@@ -97,10 +97,10 @@ const init = async (tokens) => {
 			const userInfoRes = await fetch(`${cognitoLoginUrl}/oauth2/userInfo`, {
 				headers: new Headers({"Authorization": `Bearer ${tokens.access_token}`}),
 			});
-			const apiRes = await fetch("/api", {
+			const apiRes = await fetch("/user", {
 				headers: new Headers({"Authorization": `Bearer ${tokens.access_token}`}),
 			});
-			const apiResIdToken = await fetch("/api", {
+			const apiResIdToken = await fetch("/user", {
 				headers: new Headers({"Authorization": `Bearer ${tokens.id_token}`}),
 			});
 			statusCell.innerText = `userInfo: ${userInfoRes.ok}\napi access_token: ${apiRes.ok}\napi id_token: ${apiResIdToken.ok}`;

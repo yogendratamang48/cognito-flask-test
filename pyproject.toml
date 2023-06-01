@@ -11,7 +11,7 @@ python = "^3.10"
 fastapi = "^0.95.2"
 uvicorn = "^0.22.0"
 jinja2 = "^3.1.2"
-fastapi-cognito-security = "^0.0.2"
+fastapi-cloudauth = "^0.4.3"
 
 
 [build-system]
